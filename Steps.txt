@@ -1,0 +1,20 @@
+Publish the project in your destination folder
+either run the exe file or use sc command to create a service
+- sc create WebsiteStatus binpath= c:/temp/workerservice/WebsiteStatus.exe start= auto
+- sc delete WebsiteStatus 
+voila its done
+
+
+----------------------------------------------------------------------------------------------------------------------------
+Publish on destinatioin c:/temp/workerservice/WebsiteStatus.exe
+
+PS C:\WINDOWS\system32> sc
+
+cmdlet Set-Content at command pipeline position 1
+Supply values for the following parameters:
+Value[0]:
+PS C:\WINDOWS\system32> sc.exe create WebsiteStatus binpath= c:/temp/workerservice/WebsiteStatus.exe start= auto
+[SC] CreateService SUCCESS
+PS C:\WINDOWS\system32> sc.exe delete WebsiteStatus
+[SC] DeleteService SUCCESS
+PS C:\WINDOWS\system32>
